@@ -28,7 +28,7 @@ var ocx = setInterval(function() {
 	}
 	
 	// Display the result in the element with id="countdown"
-	document.getElementById("OCd").innerHTML = ocdays;
+	document.getElementById("OCd").innerHTML = pad(ocdays, 3);
 	document.getElementById("OCh").innerHTML = pad(ochours, 2);
 	document.getElementById("OCm").innerHTML = pad(ocminutes, 2);
 	document.getElementById("OCs").innerHTML = pad(ocseconds, 2);
