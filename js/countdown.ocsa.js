@@ -8,10 +8,10 @@ var ocx = setInterval(function() {
 	var ocnow = new Date().getTime();
 
 	// Find the distance between now and the count down date
-  	var ocdistance = occountDownDate - ocnow;
+	var ocdistance = occountDownDate - ocnow;
 
-  	// Time calculations for days, hours, minutes and seconds
- 	var ocdays = Math.floor(ocdistance / (1000 * 60 * 60 * 24));
+	// Time calculations for days, hours, minutes and seconds
+	var ocdays = Math.floor(ocdistance / (1000 * 60 * 60 * 24));
 	var ochours = Math.floor((ocdistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	var ocminutes = Math.floor((ocdistance % (1000 * 60 * 60)) / (1000 * 60));
 	var ocseconds = Math.floor((ocdistance % (1000 * 60)) / 1000);
@@ -23,10 +23,10 @@ var ocx = setInterval(function() {
 			str = '0' + str;
 		}
 
-	return str;
+		return str;
 
 	}
-	
+
 	// Display the result in the element with id="countdown"
 	document.getElementById("OCd").innerHTML = pad(ocdays, 3);
 	document.getElementById("OCh").innerHTML = pad(ochours, 2);
@@ -46,4 +46,4 @@ var ocx = setInterval(function() {
 			confetti.stop();
 		}
 	}
-	}, 1000);
+}, 1000);
