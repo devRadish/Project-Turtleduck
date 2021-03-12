@@ -1,20 +1,20 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2022 22:14:00").getTime();
+var tCountDownDate = new Date("Jan 1, 2022 22:14:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var tX = setInterval(function() {
 
 	// Get today's date and time
-	var now = new Date().getTime();
+	var tNow = new Date().getTime();
 
-	// Find the distance between now and the count down date
-	var distance = countDownDate - now;
+	// Find the tDistance between now and the count down date
+	var tDistance = tCountDownDate - tNow;
 
 	// Time calculations for days, hours, minutes and seconds
-	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	var tDays = Math.floor(tDistance / (1000 * 60 * 60 * 24));
+	var tHours = Math.floor((tDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var tMinutes = Math.floor((tDistance % (1000 * 60 * 60)) / (1000 * 60));
+	var tSeconds = Math.floor((tDistance % (1000 * 60)) / 1000);
 
 	function pad(number, length) {
 
@@ -28,18 +28,18 @@ var x = setInterval(function() {
 	}
 
 	// Display the result in the element with id="countdown"
-	document.getElementById("d").innerHTML = pad(days, 3);
-	document.getElementById("h").innerHTML = pad(hours, 2);
-	document.getElementById("m").innerHTML = pad(minutes, 2);
-	document.getElementById("s").innerHTML = pad(seconds, 2);
+	document.getElementById("tD").innerHTML = pad(tDays, 3);
+	document.getElementById("tH").innerHTML = pad(tHours, 2);
+	document.getElementById("tM").innerHTML = pad(tMinutes, 2);
+	document.getElementById("tS").innerHTML = pad(tSeconds, 2);
 
 	// If the count down is finished, write some text
-	if (distance < 0) {
-		clearInterval(x);
-		document.getElementById("d").innerHTML = 0;
-		document.getElementById("h").innerHTML = 0;
-		document.getElementById("m").innerHTML = 0;
-		document.getElementById("s").innerHTML = 0;
+	if (tDistance < 0) {
+		clearInterval(tX);
+		document.getElementById("tD").innerHTML = 0;
+		document.getElementById("tH").innerHTML = 0;
+		document.getElementById("tM").innerHTML = 0;
+		document.getElementById("tS").innerHTML = 0;
 		confetti.start(10000, 350);
 	}
 }, 1000);
